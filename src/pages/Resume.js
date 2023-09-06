@@ -2,22 +2,26 @@ function Resume() {
     return (
         <div>
         <p>here:</p>
-        <hr class="dashed" />
-  
+
+
+
         <iframe
-          src="https://docs.google.com/document/d/1EvMNiyFOV4BA_qL_K-t-GJoZ1mKn7pDUA7exi16iPUI/edit?usp=sharing"
-          width="640"
+          src="https://docs.google.com/document/d/e/2PACX-1vStlES2wAz5_c6-zeNzlmW3CHKYKNohiEqDWsl7WxjdOGcZcEIdhXJQrJ4Mswxayhh7hj_a3xwQVdM5/pub?embedded=true"
+          width="1000"
           height="825"
           allow="autoplay"
-        ></iframe>
+          title="pdf"
+          frameBorder={0}>
+          
+          </iframe>
   
-        <a
-          href="/Resume_Quinn_Ha.pdf"
-          download="Resume_Quinn_Ha.pdf"
-          class="clickable"
+        {/* <a
+          // href="/Resume_Quinn_Ha.pdf"
+          // download="Resume_Quinn_Ha.pdf"
+          // class="clickable"
         >
           download
-        </a>
+        </a> */}
       </div>
     )
 }

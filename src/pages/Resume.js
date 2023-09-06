@@ -11,8 +11,7 @@ function Resume() {
           height="825"
           allow="autoplay"
           title="pdf"
-          frameBorder={0}
-          scrolling="no">
+          frameBorder={0}>
           
           </iframe>
   

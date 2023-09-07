@@ -35,6 +35,7 @@ const Directory = styled.div`
 function Home() {
 
     const [input, setInput ] = useState('');
+    const [directory, setDirectory] = useState('~')
     const [output, setOutput] = useState(['Welcome to my website! Type `help` if you would like to understand how to use this terminal style website, or `off` to switch back to a GUI', 'Enter `ls` for things about me, and then `cd` navigate to that page', '-------------------------------------------------------------------------------------------------------------------------------------------']);
     const help = ["`clear` will clear the output", "`off` is currently in development", "`ls` displays directories that describe who I am"]
     const directories = ["about", "resume", "tutoring"]
@@ -46,16 +47,21 @@ function Home() {
         const {key, target: {value} } = e;
 
         if (key === 'Enter') {
-            console.log(value)
             setInput('')
 
             const commands = value.split(" ")
 
+
             switch(commands[0].toLowerCase()) {
-                case "ls": 
-                    setOutput([...output, ...directories])
-                    break
+                case "ls":
+                    if (directory == "~") setOutput([...output, ...directories]); break
                 case "cd":
+                    if (commands.length > 1 && directories.includes(commands[1].toLowerCase())) {
+                        setOutput(["YOO"])
+                        setDirectory(commands[1].toLowerCase())
+                        break
+                    } 
+                    setDirectory('~')
                     break
                 case "clear":
                     setOutput([])
@@ -70,6 +76,7 @@ function Home() {
                     setOutput([...output, `command not found: ${commands[0]}`]) //will cause rerender twice if command not found
 
             }
+
 
             
 
@@ -92,7 +99,7 @@ function Home() {
             ))}
             <Prompt>
                 <User>user@andrewbovbelresume</User>
-                <Directory>{" ~ "}</Directory>
+                <Directory>{directory}</Directory>
                 <Input onKeyDown={handleInputSubmit} value={input} onChange={handleInputChange}></Input>
             </Prompt>
         </Terminal>

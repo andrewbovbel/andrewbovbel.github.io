@@ -38,7 +38,7 @@ function Home() {
     const [input, setInput ] = useState('');
     const [output, setOutput] = useState([]);
     const help = ["`clear` will clear the output", "`off` is currently in development"]
-
+    const commands = ["clear", "off", "help", "ls"]
     function handleInputChange(e) {
         setInput(e.target.value)
     }
@@ -48,20 +48,28 @@ function Home() {
 
         if (key === 'Enter') {
             console.log(value)
-            setOutput([...output, value])
             setInput('')
 
-            if (value.toLowerCase() == 'clear') {
-                setOutput([])
+            switch(value.toLowerCase()) {
+                case "clear":
+                    setOutput([])
+                    break
+                case "help": 
+                    setOutput([...output, ...help])
+                    break
+                case "off": 
+                    setOutput([...output, "`off` is currently in development, sorry!"])
+                    break
+                default:
+                    setOutput([...output, `command not found: ${value}`]) //will cause rerender twice if command not found
+
             }
 
-            if (value.toLowerCase() == 'help') {
-                setOutput([...output, ...help])
-            }
+            
+
+            
              
-            if (value.toLowerCase() == "off") {
-                setOutput([...output, "`off` is currently in development, sorry!"])
-            }
+            
         }
     }
 

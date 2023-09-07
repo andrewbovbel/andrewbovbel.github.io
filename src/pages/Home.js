@@ -2,18 +2,19 @@ import styled from 'styled-components';
 import React, { useState } from 'react';
 
 const Terminal = styled.div`
-    display: flex;
-    align-items: center;
     background-color: black;
     border: 1px solid white;
     padding: 10px;
     margin: 10px;
+    font-family: monospace;
 `
 
 const Prompt = styled.div`
-    color: green;
+    color: white;
     margin-right: 10px;
-`
+    display:flex;
+    justify-content: space-between
+    `
 
 const Input = styled.input`
     background-color: black;
@@ -24,21 +25,19 @@ const Input = styled.input`
     width: 100%;
 `
 
-const Output = styled.div`
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid white;
-    background-color: black;
-    white-space: pre-wrap;
-    max-height: 200px;
-    overflow-y: auto;
+const User = styled.div`
+    margin-right: 10px
 `
+const Directory = styled.div`
+    margin-right: 10px
+`
+
 function Home() {
 
     const [input, setInput ] = useState('');
-    const [output, setOutput] = useState([]);
-    const help = ["`clear` will clear the output", "`off` is currently in development"]
-    const commands = ["clear", "off", "help", "ls"]
+    const [output, setOutput] = useState(['Welcome to my website! Type `help` if you would like to understand how to use this terminal style website, or `off` to switch back to a GUI', 'Enter `ls` for things about me, and then `cd` navigate to that page', '-------------------------------------------------------------------------------------------------------------------------------------------']);
+    const help = ["`clear` will clear the output", "`off` is currently in development", "`ls` displays directories that describe who I am"]
+    const directories = ["about", "resume", "tutoring"]
     function handleInputChange(e) {
         setInput(e.target.value)
     }
@@ -50,7 +49,14 @@ function Home() {
             console.log(value)
             setInput('')
 
-            switch(value.toLowerCase()) {
+            const commands = value.split(" ")
+
+            switch(commands[0].toLowerCase()) {
+                case "ls": 
+                    setOutput([...output, ...directories])
+                    break
+                case "cd":
+                    break
                 case "clear":
                     setOutput([])
                     break
@@ -61,7 +67,7 @@ function Home() {
                     setOutput([...output, "`off` is currently in development, sorry!"])
                     break
                 default:
-                    setOutput([...output, `command not found: ${value}`]) //will cause rerender twice if command not found
+                    setOutput([...output, `command not found: ${commands[0]}`]) //will cause rerender twice if command not found
 
             }
 
@@ -75,17 +81,20 @@ function Home() {
 
     return(
         <>
-        <Output>
-        Welcome to my website! Type `help` if you would like to understand how to use this terminal style website, or `off` to switch back to a GUI
-        </Output>
-        <Output>
+        
+        <Terminal>
+        {/* <Output>
+            
+            
+        </Output>    */}
             {output.map((line, index) => (
                 <div key={index}>{line}</div>
             ))}
-        </Output>
-        <Terminal>
-            <Prompt>user@andrewbovbelresume</Prompt>
-            <Input onKeyDown={handleInputSubmit} value={input} onChange={handleInputChange}></Input>
+            <Prompt>
+                <User>user@andrewbovbelresume</User>
+                <Directory>{" ~ "}</Directory>
+                <Input onKeyDown={handleInputSubmit} value={input} onChange={handleInputChange}></Input>
+            </Prompt>
         </Terminal>
         
          </>

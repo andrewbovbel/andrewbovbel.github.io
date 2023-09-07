@@ -32,7 +32,9 @@ const Directory = styled.div`
     margin-right: 10px
 `
 
-function Home() {
+function Home({showTerminal, turnOffTerminal}) {
+
+    console.log(showTerminal)
 
     const [input, setInput ] = useState('');
     const [directory, setDirectory] = useState('~')
@@ -69,7 +71,9 @@ function Home() {
                 case "help": 
                     setOutput([...output, ...help])
                     break
-                case "off": 
+                case "off":    
+                    turnOffTerminal()
+
                     setOutput([...output, "`off` is currently in development, sorry!"])
                     break
                 default:
@@ -89,11 +93,7 @@ function Home() {
     return(
         <>
         
-        <Terminal>
-        {/* <Output>
-            
-            
-        </Output>    */}
+        {showTerminal && <Terminal>
             {output.map((line, index) => (
                 <div key={index}>{line}</div>
             ))}
@@ -102,7 +102,7 @@ function Home() {
                 <Directory>{directory}</Directory>
                 <Input onKeyDown={handleInputSubmit} value={input} onChange={handleInputChange}></Input>
             </Prompt>
-        </Terminal>
+        </Terminal>}
         
          </>
     )

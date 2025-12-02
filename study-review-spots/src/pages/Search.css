@@ -2,38 +2,66 @@
   width: 100%;
 }
 
+/* Page header with consistent spacing (Gestalt Proximity) */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2xl);
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+}
+
 .search-page h1 {
-  margin-bottom: 2rem;
+  margin: 0;
+}
+
+.add-spot-button {
+  flex-shrink: 0;
 }
 
 .search-layout {
   display: grid;
   grid-template-columns: 280px 1fr;
-  gap: 2rem;
+  gap: var(--spacing-2xl);
 }
 
 .filters-panel {
   background: var(--surface);
-  padding: 1.5rem;
-  border-radius: 12px;
+  padding: var(--spacing-2xl);
+  border: 2px solid var(--border);
+  border-radius: 0;
   height: fit-content;
   position: sticky;
   top: 100px;
+  box-shadow: 0 2px 12px var(--shadow);
+}
+
+.filters-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--secondary-color);
 }
 
 .filters-panel h2 {
   font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-xl);
 }
 
+/* Consistent filter group spacing (Gestalt Proximity & Common Region) */
 .filter-group {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-2xl);
 }
 
+/* Consistent label spacing above controls (Gestalt Common Region) */
 .filter-group label {
   display: block;
   font-weight: 500;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
   color: var(--text-primary);
 }
 
@@ -44,7 +72,7 @@
 .amenities-list {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--spacing-md);
 }
 
 .amenity-checkbox {
@@ -61,9 +89,11 @@
   cursor: pointer;
 }
 
+/* Clear filters button - consistent sizing and spacing */
 .clear-filters {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: var(--spacing-lg);
+  min-height: var(--button-min-height);
 }
 
 .search-results {
@@ -72,8 +102,8 @@
 
 .search-bar {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
 }
 
 .search-input-large {
@@ -82,41 +112,83 @@
 }
 
 .results-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-xl);
   color: var(--text-secondary);
 }
 
 .spots-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--spacing-xl);
 }
 
 .spot-card-large {
   display: flex;
-  gap: 1.5rem;
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 1px 3px var(--shadow);
-  transition: all 0.2s;
+  gap: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0;
+  box-shadow: 0 2px 8px var(--shadow);
+  transition: all 0.3s ease;
   text-decoration: none;
   color: inherit;
+  overflow: hidden;
+  position: relative;
+}
+
+.new-badge-wrapper {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  z-index: 10;
+}
+
+.spot-card-large::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--primary-color);
 }
 
 .spot-card-large:hover {
-  box-shadow: 0 4px 12px var(--shadow-lg);
-  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--primary-color);
 }
 
 .spot-image-large {
-  font-size: 4rem;
   flex-shrink: 0;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--gold-tint);
+  border-right: 2px solid var(--border);
+}
+
+.spot-image-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spot-image-large .image-placeholder {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .spot-details {
   flex: 1;
   min-width: 0;
+  padding: 1.5rem;
 }
 
 .spot-details h3 {
@@ -128,6 +200,18 @@
 .spot-location {
   color: var(--text-secondary);
   margin-bottom: 0.75rem;
+}
+
+.spot-location a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.spot-location a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
 }
 
 .spot-description {
@@ -148,6 +232,12 @@
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.875rem;
+}
+
+.booking-tag {
+  background: var(--warning);
+  color: white;
+  font-weight: 500;
 }
 
 .spot-meta {

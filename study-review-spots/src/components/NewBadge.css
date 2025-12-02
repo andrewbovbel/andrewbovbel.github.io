@@ -1,0 +1,76 @@
+.new-badge-container {
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+}
+
+.new-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--success);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px var(--shadow);
+  cursor: help;
+  transition: all 0.2s;
+}
+
+.new-badge:hover {
+  background-color: #0ea572;
+  transform: scale(1.05);
+}
+
+.new-badge-tooltip {
+  position: absolute;
+  top: calc(100% + var(--spacing-sm));
+  right: 0;
+  min-width: 250px;
+  max-width: 300px;
+  background: var(--surface);
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  box-shadow: 0 4px 12px var(--shadow-lg);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .new-badge-tooltip {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 280px;
+  }
+}
+
+.new-badge-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: var(--spacing-lg);
+  border: 8px solid transparent;
+  border-bottom-color: var(--primary-color);
+}
+
+.tooltip-content strong {
+  display: block;
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.tooltip-content p {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+

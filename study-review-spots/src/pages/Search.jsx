@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { studySpots, filters } from '../data/mockData'
+import { getAllStudySpots, addCustomSpot, isCustomSpot } from '../utils/storage'
+import StarRating from '../components/StarRating'
+import AddSpotModal from '../components/AddSpotModal'
+import NewBadge from '../components/NewBadge'
 import './Search.css'
 
 function Search() {
@@ -10,10 +14,31 @@ function Search() {
   const [selectedType, setSelectedType] = useState('All')
   const [selectedNoiseLevel, setSelectedNoiseLevel] = useState('All')
   const [selectedAmenities, setSelectedAmenities] = useState([])
-  const [filteredSpots, setFilteredSpots] = useState(studySpots)
+  const [bookingRequired, setBookingRequired] = useState(null) // null = all, true = requires booking, false = no booking
+  const [allSpots, setAllSpots] = useState(() => getAllStudySpots(studySpots))
+  const [filteredSpots, setFilteredSpots] = useState(allSpots)
+  const [showAddModal, setShowAddModal] = useState(false)
 
   useEffect(() => {
-    let filtered = studySpots
+    const updatedSpots = getAllStudySpots(studySpots)
+    setAllSpots(updatedSpots)
+  }, [])
+
+  useEffect(() => {
+    const handleCustomSpotsChange = () => {
+      const updatedSpots = getAllStudySpots(studySpots)
+      setAllSpots(updatedSpots)
+    }
+
+    window.addEventListener('customSpotsChanged', handleCustomSpotsChange)
+    
+    return () => {
+      window.removeEventListener('customSpotsChanged', handleCustomSpotsChange)
+    }
+  }, [])
+
+  useEffect(() => {
+    let filtered = allSpots
 
     // Search query filter
     if (searchQuery) {
@@ -41,8 +66,24 @@ function Search() {
       )
     }
 
+    // Booking required filter
+    if (bookingRequired !== null) {
+      filtered = filtered.filter(spot => spot.bookingRequired === bookingRequired)
+    }
+
     setFilteredSpots(filtered)
-  }, [searchQuery, selectedType, selectedNoiseLevel, selectedAmenities])
+  }, [searchQuery, selectedType, selectedNoiseLevel, selectedAmenities, bookingRequired, allSpots])
+
+  const handleAddSpot = (spotData) => {
+    try {
+      const newSpot = addCustomSpot(spotData)
+      // The customSpotsChanged event will update allSpots automatically
+      alert(`Study spot "${newSpot.name}" has been added successfully!`)
+    } catch (error) {
+      alert('Error adding study spot. Please try again.')
+      console.error(error)
+    }
+  }
 
   const handleAmenityToggle = (amenity) => {
     setSelectedAmenities(prev =>
@@ -62,12 +103,21 @@ function Search() {
     setSelectedType('All')
     setSelectedNoiseLevel('All')
     setSelectedAmenities([])
+    setBookingRequired(null)
     setSearchParams({})
   }
 
   return (
     <div className="search-page">
-      <h1>Browse Study Spots</h1>
+      <div className="page-header">
+        <h1>Browse Study Spots</h1>
+        <button 
+          className="btn-primary add-spot-button"
+          onClick={() => setShowAddModal(true)}
+        >
+          + Add Study Spot
+        </button>
+      </div>
       
       <div className="search-layout">
         <aside className="filters-panel">
@@ -96,6 +146,22 @@ function Search() {
               {filters.noiseLevels.map(level => (
                 <option key={level} value={level}>{level}</option>
               ))}
+            </select>
+          </div>
+
+          <div className="filter-group">
+            <label>Booking Required</label>
+            <select 
+              value={bookingRequired === null ? 'All' : bookingRequired ? 'Yes' : 'No'} 
+              onChange={(e) => {
+                const value = e.target.value
+                setBookingRequired(value === 'All' ? null : value === 'Yes')
+              }}
+              className="filter-select"
+            >
+              <option value="All">All</option>
+              <option value="Yes">Requires Booking</option>
+              <option value="No">No Booking Needed</option>
             </select>
           </div>
 
@@ -142,18 +208,40 @@ function Search() {
             {filteredSpots.length > 0 ? (
               filteredSpots.map(spot => (
                 <Link key={spot.id} to={`/spot/${spot.id}`} className="spot-card-large">
-                  <div className="spot-image-large">{spot.image}</div>
+                  {isCustomSpot(spot.id) && (
+                    <div className="new-badge-wrapper">
+                      <NewBadge />
+                    </div>
+                  )}
+                  <div className="spot-image-large">
+                    {spot.image ? (
+                      <img src={spot.image} alt={spot.name} />
+                    ) : (
+                      <div className="image-placeholder">Image</div>
+                    )}
+                  </div>
                   <div className="spot-details">
                     <h3>{spot.name}</h3>
-                    <p className="spot-location">{spot.location}</p>
+                    <p className="spot-location">
+                      {spot.location ? (
+                        <a href={spot.location} target="_blank" rel="noopener noreferrer">
+                          Go to Google Maps
+                        </a>
+                      ) : (
+                        'Location not available'
+                      )}
+                    </p>
                     <p className="spot-description">{spot.description}</p>
                     <div className="spot-tags">
                       <span className="tag">{spot.type}</span>
                       <span className="tag">{spot.noiseLevel}</span>
+                      {spot.bookingRequired && (
+                        <span className="tag booking-tag">Requires Booking</span>
+                      )}
                     </div>
                     <div className="spot-meta">
                       <span className="spot-rating">
-                        ⭐ {spot.rating} ({spot.reviewCount} reviews)
+                        <StarRating rating={spot.rating} showNumber={true} reviewCount={spot.reviewCount} size="small" />
                       </span>
                       <div className="amenities-preview">
                         {spot.amenities.slice(0, 3).map((amenity, idx) => (
@@ -178,6 +266,12 @@ function Search() {
           </div>
         </main>
       </div>
+      
+      <AddSpotModal
+        isOpen={showAddModal}
+        onClose={() => setShowAddModal(false)}
+        onSubmit={handleAddSpot}
+      />
     </div>
   )
 }

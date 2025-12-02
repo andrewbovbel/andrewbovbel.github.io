@@ -1,10 +1,12 @@
 .navbar {
-  background-color: white;
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 1px 3px var(--shadow);
+  background-color: var(--surface);
+  border-bottom: 3px double var(--primary-color);
+  box-shadow: 0 2px 12px var(--shadow);
   position: sticky;
   top: 0;
   z-index: 100;
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(122, 0, 25, 0.03) 2px, rgba(122, 0, 25, 0.03) 4px);
 }
 
 .navbar-container {
@@ -33,19 +35,44 @@
 
 .navbar-link {
   color: var(--text-secondary);
-  font-weight: 500;
-  padding: 0.5rem 0;
-  transition: color 0.2s;
-  border-bottom: 2px solid transparent;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .navbar-link:hover {
   color: var(--primary-color);
+  background-color: var(--gold-tint);
 }
 
 .navbar-link.active {
   color: var(--primary-color);
-  border-bottom-color: var(--primary-color);
+  border-bottom-color: var(--secondary-color);
+  background-color: var(--gold-tint);
+}
+
+.favorites-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
 }
 
 @media (max-width: 768px) {

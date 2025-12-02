@@ -1,0 +1,679 @@
+===============================================================================
+STUDY REVIEW SPOTS - VIDEO DEMONSTRATION SCRIPT
+The Marauder's Map of Study Spots
+===============================================================================
+
+[SCENE 1: INTRODUCTION AND HOME PAGE OVERVIEW]
+
+ANDREW
+Welcome! I'm here to demonstrate the Study Review Spots application, designed specifically for McMaster University students. This is "The Marauder's Map of Study Spots" - a platform where students can discover, review, and share the best study locations on campus.
+
+** Show the browser window with the application loaded on the home page **
+
+** Point to the top navigation bar **
+
+Let me start by showing you the navigation. At the top, we have our logo on the left showing "The Marauder's Map of Study Spots" with the McMaster M logo. The navigation bar includes two links: "Home" and "Browse Spots". 
+
+** Hover over the "Home" link to show it's clickable and active **
+
+You can see the Home link is currently active, indicated by the gold underline and background tint.
+
+** Scroll down to show the hero section **
+
+[SCENE 2: HERO SECTION AND SEARCH FUNCTIONALITY]
+
+Here's our hero section with the McMaster University badge at the top. The main heading says "Find Your Perfect Study Spot" and below it is a subtitle explaining the platform's purpose.
+
+** Point to the search bar in the hero section **
+
+The hero section features a prominent search bar where users can type in keywords to search for study spots.
+
+** Type "library" in the search input field **
+
+Let me demonstrate the search functionality. I'll type "library" to search for library study spots.
+
+** Click the "Search" button **
+
+When I click Search, it will take me to the search results page with my query.
+
+** Show the URL change and search results page loading **
+
+You can see the URL has updated with the search query parameter, and the page has navigated to show results matching "library".
+
+** Click the back button in browser or click "Home" in navigation **
+
+Let me go back to the home page to show you another feature.
+
+** Click "Browse All Spots" button in the hero section **
+
+Alternatively, users can click this "Browse All Spots" button to see all available study spots without a search query.
+
+** Show navigation to search page **
+
+[SCENE 3: FEATURED STUDY SPOTS ON HOME PAGE]
+
+** Scroll down to "Featured Study Spots" section **
+
+Back on the home page, here's the Featured Study Spots section displaying three popular study locations.
+
+** Point to the first featured spot card **
+
+Each featured spot card shows the spot image - or a placeholder if no image is uploaded - the spot name, a "Go to Google Maps" link for the location, the star rating with number of reviews, and the spot type.
+
+** Click on the first featured spot card **
+
+When I click on this card, it navigates to the detailed view of that study spot.
+
+** Show the spot detail page loading **
+
+[SCENE 4: SPOT DETAIL PAGE - FIRST VIEW]
+
+** Point to the back link **
+
+At the top of the detail page, there's a "Back to Search" link that returns users to the search page.
+
+** Point to the header section **
+
+The detail page header shows the spot's image on the left - again with a placeholder if no image is uploaded - and on the right we see the spot name, a "Go to Google Maps" link, and a large star rating display showing both the visual stars and the numerical rating with review count.
+
+** Scroll down to show the Description section **
+
+Below the header, we have the Description section with detailed information about the study spot.
+
+** Continue scrolling to Hours section **
+
+Next is the Hours section showing when this location is available.
+
+** Continue scrolling to Amenities section **
+
+The Amenities section displays all available amenities in a grid layout. Each amenity has a checkmark icon and is clearly labeled.
+
+** Continue scrolling to Spot Details section **
+
+The Spot Details section shows key information in a grid: the Type, Noise Level, Location with another Google Maps link, and whether Booking is Required.
+
+** Continue scrolling to Reviews section **
+
+Here's the Reviews section showing all user reviews. Each review card displays the reviewer's name, their star rating, the review date, and their written comment.
+
+** Point to "Write a Review" button **
+
+At the bottom of the reviews, there's a "Write a Review" button for users to contribute their own feedback.
+
+** Point to the sidebar on the right **
+
+** Scroll up slightly to show sidebar fully **
+
+On the right side, we have a sidebar with two cards. The first is Quick Info showing a summary: Rating, Type, Noise level, and Booking status.
+
+** Point to the action buttons in the second sidebar card **
+
+The second sidebar card contains action buttons. If the spot requires booking, you'll see a "Book This Spot" button at the top. Below that are "Save to Favorites" and "Share Spot" buttons.
+
+** Click "Back to Search" link at top **
+
+Let me return to the search page to show you the filtering capabilities.
+
+[SCENE 5: SEARCH PAGE AND FILTERING SYSTEM]
+
+** Show the search page fully loaded **
+
+Now I'm on the Browse Study Spots page. This page has a two-column layout with filters on the left and results on the right.
+
+** Point to the search bar at the top of results section **
+
+At the top of the results area, there's another search bar that works in conjunction with the filters.
+
+** Type "quiet" in the search bar **
+
+Let me type "quiet" to search for quiet study spots.
+
+** Click the Search button **
+
+The results update to show only spots matching "quiet" in their name, location, or description.
+
+** Point to the Filters panel on the left **
+
+Now let me demonstrate the comprehensive filtering system on the left panel.
+
+[SCENE 6: FILTER CONTROLS - TYPE DROPDOWN]
+
+** Point to the Type filter dropdown **
+
+The first filter is the Type dropdown. It currently shows "All" which means all types are included.
+
+** Click on the Type dropdown to open it **
+
+** Show the dropdown menu options: All, Library, Quiet Zone, Cafe, Scenic **
+
+You can see the available types: All, Library, Quiet Zone, Cafe, and Scenic.
+
+** Select "Library" from the dropdown **
+
+Let me select "Library" to filter for only library study spots.
+
+** Show the results updating automatically **
+
+The results immediately update to show only library-type spots, and you can see the result count has changed.
+
+[SCENE 7: FILTER CONTROLS - NOISE LEVEL DROPDOWN]
+
+** Point to the Noise Level dropdown **
+
+Next is the Noise Level filter dropdown.
+
+** Click on the Noise Level dropdown **
+
+** Show the options: All, Quiet, Moderate, Lively **
+
+Available options are All, Quiet, Moderate, and Lively.
+
+** Select "Quiet" from the dropdown **
+
+I'll select "Quiet" to show only quiet study spots.
+
+** Show the results updating again **
+
+The results have further narrowed down to show only quiet library spots.
+
+[SCENE 8: FILTER CONTROLS - BOOKING REQUIRED DROPDOWN]
+
+** Point to the Booking Required dropdown **
+
+The third filter is Booking Required, which helps users find spots that need reservations versus walk-in locations.
+
+** Click on the Booking Required dropdown **
+
+** Show the options: All, Requires Booking, No Booking Needed **
+
+The options are All, Requires Booking, and No Booking Needed.
+
+** Select "No Booking Needed" **
+
+Let me select "No Booking Needed" to filter for spots that don't require reservations.
+
+** Show results updating **
+
+The results now show only quiet libraries that don't require booking.
+
+[SCENE 9: FILTER CONTROLS - AMENITIES CHECKBOXES]
+
+** Point to the Amenities section with checkboxes **
+
+Below the dropdown filters, we have the Amenities section with multiple checkboxes.
+
+** Scroll down in filters panel if needed to show all amenities **
+
+You can see several amenity options: WiFi, Power Outlets, 24/7 Access, Food & Drinks, Group Tables, Quiet Spaces, Private Rooms, and Booking Required.
+
+** Click the checkbox for "WiFi" **
+
+Let me check "WiFi" to filter for spots that have WiFi.
+
+** Show the checkbox becoming checked and results updating **
+
+The checkbox is now checked, and the results update to show only spots that have WiFi along with the other active filters.
+
+** Click the checkbox for "Power Outlets" **
+
+Now let me also check "Power Outlets" - notice you can select multiple amenities.
+
+** Show both checkboxes checked and results updating **
+
+Both checkboxes are selected, and the results now show spots that have both WiFi and Power Outlets, along with all the previous filters.
+
+** Click "WiFi" checkbox again to uncheck it **
+
+You can uncheck any amenity by clicking it again.
+
+** Show the checkbox unchecking and results updating **
+
+The WiFi filter is removed, and results update accordingly.
+
+[SCENE 10: CLEAR FILTERS FUNCTIONALITY]
+
+** Point to the "Clear All Filters" button at bottom of filters panel **
+
+At the bottom of the filters panel, there's a "Clear All Filters" button.
+
+** Click the "Clear All Filters" button **
+
+When clicked, this button resets all filters to their default state: search query cleared, Type back to "All", Noise Level back to "All", Booking Required back to "All", and all amenity checkboxes unchecked.
+
+** Show all filters resetting and all spots displaying again **
+
+You can see all filters have been cleared and all thirteen study spots are now displayed again.
+
+[SCENE 11: SEARCH RESULT CARDS INTERACTION]
+
+** Scroll down to show multiple result cards **
+
+Let me scroll down to show you the search result cards in detail.
+
+** Point to a result card **
+
+Each result card displays the spot image on the left, and on the right shows the spot name, a "Go to Google Maps" link, a description, tags for type and noise level, and if booking is required, there's a special "Requires Booking" tag in gold. Below that you see the star rating with review count, and a preview of the top three amenities.
+
+** Hover over a result card to show hover effect **
+
+When you hover over a card, it elevates slightly with a shadow effect and the border changes to solid, indicating it's interactive.
+
+** Click on one of the result cards **
+
+Clicking on any card navigates to that spot's detail page.
+
+** Show navigating to spot detail page **
+
+[SCENE 12: SPOT DETAIL PAGE - COMPREHENSIVE VIEW]
+
+** Show the complete spot detail page **
+
+Now we're on a spot detail page. Let me show you all the features here.
+
+** Point to the "Go to Google Maps" link in the header **
+
+In the header, the "Go to Google Maps" link is clickable and will open the location in Google Maps in a new tab.
+
+** Point to the star rating component **
+
+The large star rating display uses a custom component showing filled and empty stars, along with the numerical rating and review count.
+
+** Scroll down through Description section **
+
+The Description section provides a detailed overview of the study spot.
+
+** Scroll to Hours section **
+
+Hours section shows when the location is available.
+
+** Scroll to Amenities grid **
+
+The Amenities grid displays all available amenities with checkmark icons in an organized layout.
+
+** Scroll to Spot Details grid **
+
+Spot Details shows the Type, Noise Level, Location with another Google Maps link, and Booking Required status.
+
+** Scroll to Reviews section **
+
+** Point to the review count in the section heading **
+
+The Reviews section heading shows the number of reviews in parentheses.
+
+** Point to the first review card **
+
+Each review displays the author's name, their individual star rating using the same star component, the review date, and their written comment.
+
+** Scroll to show multiple reviews if available **
+
+You can scroll through all the reviews to see different student perspectives.
+
+** Point to "Write a Review" button **
+
+The "Write a Review" button at the bottom allows users to contribute their own feedback.
+
+** Scroll up and point to sidebar Quick Info card **
+
+The sidebar Quick Info card provides a quick reference with Rating, Type, Noise level, and Booking status.
+
+** Point to action buttons in sidebar **
+
+** Show the "Book This Spot" button if spot requires booking **
+
+If the spot requires booking, you'll see the "Book This Spot" button here. Otherwise, you'll see "Save to Favorites" and "Share Spot" buttons.
+
+** Click on one of the action buttons to show it's interactive **
+
+All these buttons are clickable and ready for future functionality implementation.
+
+[SCENE 13: DEMONSTRATING FILTER COMBINATIONS]
+
+** Click "Browse Spots" in navigation to return to search page **
+
+Let me go back to the search page to demonstrate more filter combinations.
+
+** Clear any existing filters if needed **
+
+** Select "Cafe" from Type dropdown **
+
+Now let me select "Cafe" from the Type filter.
+
+** Select "Moderate" from Noise Level dropdown **
+
+And "Moderate" for Noise Level to find cafes with moderate noise levels.
+
+** Check "Food & Drinks" amenity checkbox **
+
+I'll also check "Food & Drinks" since cafes typically offer this.
+
+** Show results updating to show only cafes with moderate noise that have food and drinks **
+
+The results now show only cafes with moderate noise levels that offer food and drinks.
+
+** Click on one of the cafe result cards **
+
+Let me view one of these cafe spots in detail.
+
+** Show the cafe detail page **
+
+You can see this is a cafe spot with its specific details, amenities, and reviews.
+
+[SCENE 14: DEMONSTRATING BOOKING FILTER]
+
+** Go back to search page **
+
+** Set Type to "All" **
+
+** Set Noise Level to "All" **
+
+** Select "Requires Booking" from Booking Required dropdown **
+
+Let me demonstrate the Booking Required filter by selecting "Requires Booking".
+
+** Show results updating to show only spots that require booking **
+
+The results now show only the study spots that require advance booking - you'll notice the "Requires Booking" tags on these cards.
+
+** Click on a spot that requires booking **
+
+** Show the detail page for a booking-required spot **
+
+On the detail page, you can see it clearly indicates "Booking Required: Yes" in the Spot Details section, and the sidebar shows "Booking: Required". There's also a "Book This Spot" button in the action buttons section.
+
+[SCENE 15: NO RESULTS SCENARIO]
+
+** Return to search page **
+
+** Set Type to "Scenic" **
+
+** Set Noise Level to "Lively" **
+
+** Check "Private Rooms" amenity **
+
+Let me demonstrate what happens when filters result in no matches. I'll select Scenic type, Lively noise level, and Private Rooms amenity - a combination that likely won't match any spots.
+
+** Show the "No Results" message appearing **
+
+You can see the page displays a helpful "No study spots found matching your criteria" message with a "Clear Filters" button to reset and try again.
+
+** Click "Clear Filters" button **
+
+** Show all results returning **
+
+The Clear Filters button resets everything and shows all spots again.
+
+[SCENE 16: NAVIGATION AND PAGE TRANSITIONS]
+
+** Click "Home" in navigation bar **
+
+Let me demonstrate the navigation system by clicking the Home link.
+
+** Show returning to home page **
+
+We're back on the home page, and you can see the Home link is now active with the gold underline.
+
+** Click "Browse Spots" in navigation **
+
+** Show navigating to search page **
+
+Clicking Browse Spots takes us to the search page, and that link becomes active.
+
+** Click on a featured spot card from home page **
+
+From the home page, I can click any of the three featured spot cards.
+
+** Show navigating directly to that spot's detail page **
+
+It navigates directly to that spot's detail page.
+
+** Click "Back to Search" link on detail page **
+
+** Show returning to search page with filters preserved **
+
+The back link returns to the search page. Note that if you had filters active, they would be preserved when you return.
+
+[SCENE 17: SEARCH FUNCTIONALITY FROM HOME PAGE]
+
+** Click "Home" in navigation **
+
+** Type "thode" in the hero search bar **
+
+Let me demonstrate searching from the home page. I'll type "thode" to search for Thode-related spots.
+
+** Click Search button **
+
+** Show navigating to search page with query parameter **
+
+The search navigates to the search page with the query in the URL, and results are filtered to show spots matching "thode".
+
+** Show the search input on search page is populated with "thode" **
+
+Notice the search input on the search page is automatically populated with my search term.
+
+[SCENE 18: GOOGLE MAPS LINKS]
+
+** Click on a result card to go to detail page **
+
+** Point to "Go to Google Maps" link in header **
+
+On any spot detail page, the "Go to Google Maps" link in the header opens the location.
+
+** Click "Go to Google Maps" link **
+
+** Show link opening in new tab (mention this behavior) **
+
+When clicked, this opens Google Maps in a new tab with the location, allowing users to get directions without losing their place in the application.
+
+** Close the Google Maps tab and return to application **
+
+** Scroll down to Spot Details section **
+
+** Point to second "Go to Google Maps" link in Spot Details **
+
+There's also another "Go to Google Maps" link in the Spot Details section for easy access.
+
+** Point to "Go to Google Maps" links in result cards **
+
+Similarly, the search result cards also have "Go to Google Maps" links.
+
+[SCENE 19: VISUAL DESIGN ELEMENTS]
+
+** Return to home page **
+
+Let me highlight some of the visual design elements that make this application unique.
+
+** Point to the McMaster color scheme (red and gold) **
+
+The application uses McMaster University's official colors - maroon red and gold - throughout the design.
+
+** Point to the parchment/paper texture background **
+
+The background has a subtle parchment texture with a warm gold tint, giving it that Marauder's Map aesthetic.
+
+** Point to the logo with McMaster M **
+
+The logo features the McMaster M in a circle, combining university branding with the map theme.
+
+** Scroll down and point to the Marauder's Seal in bottom right corner **
+
+In the bottom right corner, there's a decorative Marauder's Seal element that adds to the theme.
+
+** Hover over the seal to show animation **
+
+The seal has a hover animation that makes it rotate and scale slightly.
+
+** Point to the card styling with dashed borders and accent bars **
+
+All cards have distinctive styling with dashed borders and accent bars at the top, giving them a hand-drawn map feel.
+
+** Point to the step icons in "How It Works" section **
+
+The "How It Works" section uses styled badges instead of generic icons, maintaining the custom design aesthetic.
+
+[SCENE 20: RESPONSIVE DESIGN DEMONSTRATION]
+
+** Show the application at full browser width **
+
+The application is designed to work across different screen sizes. At full width, you can see the two-column layout with filters on the left and results on the right.
+
+** Resize browser window to show responsive behavior **
+
+When I resize the browser window, you can see the layout adapts. On smaller screens, the filters panel moves above the results, and cards stack vertically for better mobile viewing.
+
+** Show cards adjusting in mobile view **
+
+** Resize back to full width **
+
+[SCENE 21: REVIEW SYSTEM]
+
+** Navigate to a spot detail page **
+
+** Scroll to Reviews section **
+
+Let me show you the review system in detail.
+
+** Point to review count in section heading **
+
+The section heading shows the total number of reviews for this spot.
+
+** Point to first review showing author name **
+
+Each review displays the reviewer's name - in this case, "Sarah M."
+
+** Point to the star rating component for individual review **
+
+Each review has its own star rating displayed using the same custom star component, showing exactly how the reviewer rated the spot.
+
+** Point to the review date **
+
+The date shows when the review was posted - "2024-01-15" in this example.
+
+** Point to the review comment text **
+
+And the written comment provides detailed feedback about the study spot experience.
+
+** Scroll to show multiple reviews **
+
+You can see multiple reviews from different students, each with their own rating and perspective.
+
+** Point to "Write a Review" button **
+
+The "Write a Review" button allows users to contribute their own experiences and ratings.
+
+[SCENE 22: AMENITIES AND TAGS]
+
+** Scroll up to Amenities section on detail page **
+
+The Amenities section displays all available amenities in a clear grid format.
+
+** Point to amenity items with checkmarks **
+
+Each amenity has a checkmark icon and is clearly labeled, making it easy to quickly see what's available.
+
+** Scroll down to Spot Details section **
+
+** Point to the tags showing Type and Noise Level **
+
+In the Spot Details section, you can see tags for Type and Noise Level.
+
+** Go back to search page **
+
+** Point to tags on result cards **
+
+On the search result cards, you can see tags for Type and Noise Level displayed as badges.
+
+** Point to "Requires Booking" tag if visible on any card **
+
+If a spot requires booking, it has a special gold "Requires Booking" tag that stands out.
+
+** Point to amenity badges on result cards **
+
+Below the rating, each card shows a preview of the top three amenities as small badges, with a "+X" indicator if there are more amenities available.
+
+[SCENE 23: STAR RATING SYSTEM]
+
+** Point to star rating on a result card **
+
+Let me highlight the custom star rating system used throughout the application.
+
+** Point to the stars **
+
+The rating uses filled gold stars for the rating value and empty stars for the remainder, creating a visual 5-star scale.
+
+** Point to the numerical rating **
+
+Next to the stars, you see the numerical rating - for example, "4.7".
+
+** Point to the review count **
+
+And the number of reviews in parentheses - "(142 reviews)".
+
+** Navigate to a detail page **
+
+** Point to the large star rating in header **
+
+On the detail page, the star rating is displayed larger in the header for emphasis.
+
+** Scroll to individual reviews **
+
+** Point to star ratings in individual reviews **
+
+Each individual review also has its own star rating using the same component.
+
+** Scroll to sidebar Quick Info **
+
+** Point to rating in Quick Info sidebar **
+
+The sidebar Quick Info also displays the rating with the star component.
+
+[SCENE 24: CONCLUSION AND FEATURE SUMMARY]
+
+** Return to home page **
+
+Let me summarize all the key features demonstrated:
+
+** Point to navigation **
+
+The application has clear navigation between Home and Browse Spots pages.
+
+** Point to search functionality **
+
+Search functionality is available both on the home page and search page, allowing users to find spots by name, location, or description.
+
+** Point to filtering system **
+
+A comprehensive filtering system includes Type dropdown, Noise Level dropdown, Booking Required dropdown, and multiple amenity checkboxes, all working together to narrow down results.
+
+** Point to result cards **
+
+Search results display as interactive cards showing key information at a glance.
+
+** Point to detail pages **
+
+Each spot has a detailed page with complete information, amenities, hours, and reviews.
+
+** Point to Google Maps integration **
+
+Multiple Google Maps links throughout allow users to get directions easily.
+
+** Point to review system **
+
+A complete review system lets students read and contribute feedback about study spots.
+
+** Point to responsive design **
+
+The application is fully responsive and works on different screen sizes.
+
+** Point to McMaster branding **
+
+The design incorporates McMaster University colors and branding throughout.
+
+** Show the complete application one more time **
+
+This completes the demonstration of the Study Review Spots application. Thank you for watching!
+
+===============================================================================
+END OF SCRIPT
+===============================================================================
+
+

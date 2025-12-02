@@ -2,9 +2,10 @@
   width: 100%;
 }
 
+/* Consistent spacing throughout detail page (Gestalt Proximity) */
 .back-link {
   display: inline-block;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-2xl);
   color: var(--primary-color);
   font-weight: 500;
 }
@@ -15,29 +16,81 @@
 
 .detail-header {
   display: flex;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
+  padding-bottom: var(--spacing-2xl);
   border-bottom: 2px solid var(--border);
 }
 
 .detail-image-large {
-  font-size: 6rem;
   flex-shrink: 0;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.detail-image-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-image-large .image-placeholder {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .detail-info {
   flex: 1;
 }
 
+.detail-title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
 .detail-info h1 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 .detail-location {
   font-size: 1.125rem;
   color: var(--text-secondary);
   margin-bottom: 1rem;
+}
+
+.detail-location a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.detail-location a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.detail-item a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.detail-item a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
 }
 
 .detail-rating {
@@ -47,31 +100,51 @@
   flex-wrap: wrap;
 }
 
-.rating-stars {
-  font-size: 1.25rem;
-}
-
-.rating-value {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.rating-count {
-  color: var(--text-secondary);
-}
-
 .detail-content {
   display: grid;
   grid-template-columns: 1fr 320px;
-  gap: 2rem;
+  gap: var(--spacing-2xl);
 }
 
 .detail-main {
   min-width: 0;
 }
 
+/* Consistent section spacing (Gestalt Proximity & Common Region) */
 .detail-section {
-  margin-bottom: 3rem;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.moderation-notice {
+  background: var(--gold-tint);
+  border: 2px dashed var(--secondary-color);
+  border-radius: 8px;
+  padding: var(--spacing-xl);
+}
+
+.notice-content {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+}
+
+.notice-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.notice-content strong {
+  display: block;
+  color: var(--primary-color);
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.notice-content p {
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
 .detail-section h2 {
@@ -123,8 +196,8 @@
 .reviews-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
 }
 
 .review-card {
@@ -161,10 +234,11 @@
   width: 100%;
 }
 
+/* Sidebar with consistent gap spacing (Gestalt Proximity) */
 .detail-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--spacing-xl);
   height: fit-content;
   position: sticky;
   top: 100px;
@@ -203,13 +277,42 @@
   color: var(--text-primary);
 }
 
+/* Full-width buttons with consistent spacing (Gestalt Proximity) */
 .full-width {
   width: 100%;
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--spacing-md);
 }
 
 .full-width:last-child {
   margin-bottom: 0;
+}
+
+/* Consistent button grouping (Gestalt Common Region) */
+.sidebar-card .full-width + .full-width {
+  margin-top: var(--spacing-sm);
+}
+
+.full-width.favorited {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+}
+
+.full-width.favorited:hover {
+  background-color: #fdb913;
+  border-color: #fdb913;
+}
+
+.visited-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--success);
+  color: white;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-align: center;
 }
 
 @media (max-width: 968px) {

